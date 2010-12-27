@@ -1,0 +1,44 @@
+
+
+
+/* layout
+--------------------------------------------- */
+body {background:transparent url('/images/greyTexture.png') top left repeat; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
+#container {width:950px; margin:90px auto;}
+#sidebar {float:right; width:320px;}
+#content {float:left; width:550px;}
+
+
+/* fonts & sprites
+--------------------------------------------- */
+header nav {font-family:"league-gothic-1","league-gothic-2";}
+
+.html5,
+.css3 {font-family:"bello-pro-1","bello-pro-2";}
+
+header nav a.active,
+#github {background:transparent url('/images/sprite.png') top left no-repeat;}
+
+
+/* header and menu
+--------------------------------------------- */
+header {width:100%; height:58px; margin:0 auto; background:transparent url('/images/blackGradient.png') top left repeat-x;}
+header nav {margin:0 auto;}
+header nav a {display:inline-block; margin:3px 70px 0 0; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
+header nav a.active {background-position:0 0; padding:0 0 0 25px;}
+header nav a:visited {color:#fff;}
+header nav a:hover {color:#ed7624;}
+
+#github {position:absolute; top:0; right:0; width:162px; height:121px; background-position:-440px 0;}
+
+
+
+
+/* title
+--------------------------------------------- */
+.html5 {}
+.css3 {}
+
+
+/* table of contents
+--------------------------------------------- */
