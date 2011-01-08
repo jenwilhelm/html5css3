@@ -6,14 +6,19 @@
 body {background:transparent url('../images/greyTexture.png') top left repeat; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
 #container {width:950px; margin:60px auto;}
 #sidebar {float:left; width:30%;}
-#content {float:right; width:63%;}
+#content {float:right; width:63%; margin:0 0 30px 0;}
 
+a,
+a:active,
+a:visited {color:#555; font-weight:bold;}
+a:hover   {color:#ed7624;}
 
 /* fonts & sprites
 --------------------------------------------- */
 header nav,
 .html5,
 .css3,
+#toc #banner,
 #toc nav,
 #content header,
 #content section h3 {font-family:'league-gothic-1','league-gothic-2';}
@@ -21,8 +26,10 @@ header nav,
 #title {font-family:'bistro-script-web-1','bistro-script-web-2';}
 
 header nav a.active,
-#github {background:transparent url('../images/sprite.png') top left no-repeat;}
-
+#toc nav ul li,
+#github,
+#toc #banner,
+#content section pre span {background:transparent url('../images/sprite.png') top left no-repeat;}
 
 /* header and menu
 --------------------------------------------- */
@@ -37,8 +44,8 @@ header nav a:hover   {color:#ed7624;}
 
 /* title
 --------------------------------------------- */
-#title {height:350px; margin:0 0 30px 0; color:#333; font-size:72px;}
-#title div {position:relative; line-height:0; }
+#title {height:350px; margin:0 0 30px 0; color:#333; font-size:72px; text-shadow:2px 2px 3px #999;}
+#title div {position:relative; line-height:0;}
 #title .html5 {line-height:135px; color:#ed7624; font-size:170px;}
 #title .amp   {display:inline-block; top:15px; font-size:102px; font-style:normal;}
 #title .css3  {display:inline-block; top:25px; color:#00a9c7; font-size:142px;}
@@ -47,11 +54,17 @@ header nav a:hover   {color:#ed7624;}
 
 /* table of contents
 --------------------------------------------- */
+#toc #banner {width:273px; height:44px; margin:0 0 30px 0; padding:8px 3px 0 0; background-position:0 -67px; color:#fff; font-size:26px; text-align:center;  
+
+}
+
 #toc nav    {font-weight:100;}
 #toc nav h1 {color:#4a4a4a; font-size:42px; line-height:38px; text-transform:uppercase;}
 #toc nav h2 {color:#ed7624; font-size:34px; line-height:28px;}
 #toc nav ul {list-style-type:none; margin:10px 0 20px 20px;}
+#toc nav ul li {padding:0 0 0 15px; background-position:0 -37px;}
 #toc nav ul li a {padding:8px 0; color:#4a4a4a; font-size:22px; text-decoration:none;}
+#toc nav ul li a:hover,
 #toc nav ul li a.active {color:#00a9c7;}
 
 /* content
@@ -62,9 +75,15 @@ header nav a:hover   {color:#ed7624;}
 #content header h2 {color:#ed7624; font-size:52px; line-height:52px;}
 
 #content section     {margin:40px 0 0 0;}
+#content section img {margin:0 20px 0 0;}
 #content section h3  {color:#00a9c7; font-size:36px; font-weight:normal;}
-#content section p   {margin:5px 0;}
-#content section pre {margin:15px 0 15px 30px; color:#333; background-color:#fff;}
+#content section p   {margin:8px 0;}
+#content section pre {position:relative; margin:15px 0 15px 30px; color:#333; background-color:#fff;  
+     -moz-border-radius:4px; 
+  -webkit-border-radius:4px; 
+          border-radius:4px; 
+}
+#content section pre span {position:absolute; bottom:-33px; right:10px; width:40px; height:36px; background-position:right -124px;}
 
 /* footer
 --------------------------------------------- */
