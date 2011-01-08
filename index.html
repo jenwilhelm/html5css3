@@ -17,7 +17,7 @@
   </head>
   <body>
     
-    <header>
+    <header id="menu">
       <nav>
         <a href="/index.html" class="active">Home</a>
         <a href="/resources.html">Resources</a>
@@ -32,15 +32,16 @@
     <div id="container">
     
       <div id="sidebar">
-        <div id="title">
-          <span class="html5">html5</span>
-          <i>&amp;</i> <span class="css3">css3</span>
-          for noobs
-          <em>and other fun things, too!</em>
-        </div>
+        <h1 id="title">
+          <div class="html5">html5</div>
+          <div class="amp">&amp;</div> 
+					<div class="css3">css3</div>
+          <div class="noobs">for noobs</div>
+          <div class="other">and other fun things, too!</div>
+        </h1>
         
         <div id="toc">
-          <aside>
+          <nav>
             <h1>Lesson 1</h1>
             <h2>html5 is your friend</h2>
               <ul>
@@ -70,37 +71,38 @@
                   <li><a href="#l1-2"></a></li>
                   <li><a href="#l1-2"></a></li>
                 </ul>  
-          </aside>
+          </nav>
         </div>
       </div>
       
       <div id="content">
         
-        <div id="lesson1" class="lessonTitle">
-          <h1>Lesson 1</h1>
-          <h2>html5 is your friend</h2>
-        </div>
+        <header id="lesson1" class="lessonTitle">
+		  		<hgroup>
+          	<h1>Lesson 1</h1>
+          	<h2>html5 is your friend</h2>
+					</hgroup>
+        </header>
         
-        <div id="lesson2" class="lessonTitle hidden">
-          <h1>Lesson 2</h1>
-          <h2>css3 is your best friend</h2>
-        </div>
+        <header id="lesson2" class="lessonTitle hidden">
+					<hgroup>
+          	<h1>Lesson 2</h1>
+          	<h2>css3 is your best friend</h2>
+        	</hgroup>
+				</header>
         
-        <div id="l1-1" class="hidden">
+        <section id="l1-1" class="">
           <h3>who can use it?</h3>
-          
-          
-          
-          
-          
-        </div>
+					<p>you, right now!</p>
+					<pre><html></pre>
+        </section>
         
-      </div>
+      </div> <!-- end content -->
     
-    </div>
+    </div> <!-- end container -->
     
     <footer>
-      
+      Footer
     </footer>
     
   </body>

@@ -3,45 +3,68 @@
 
 /* layout
 --------------------------------------------- */
-body {background:transparent url('/images/greyTexture.png') top left repeat; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
+body {background:transparent url('../images/greyTexture.png') top left repeat; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
 #container {width:950px; margin:60px auto;}
-#sidebar {float:left; width:320px;}
-#content {float:right; width:550px;}
+#sidebar {float:left; width:30%;}
+#content {float:right; width:63%;}
 
 
 /* fonts & sprites
 --------------------------------------------- */
 header nav,
 .html5,
-.css3 {font-family:"league-gothic-1","league-gothic-2";}
+.css3,
+#toc nav,
+#content header,
+#content section h3 {font-family:'league-gothic-1','league-gothic-2';}
 
-#title {font-family:"bello-pro-1","bello-pro-2";}
+#title {font-family:'bistro-script-web-1','bistro-script-web-2';}
 
 header nav a.active,
-#github {background:transparent url('/images/sprite.png') top left no-repeat;}
+#github {background:transparent url('../images/sprite.png') top left no-repeat;}
 
 
 /* header and menu
 --------------------------------------------- */
-header {width:100%; height:58px; margin:0 auto; background:transparent url('/images/blackGradient.png') top left repeat-x;}
-header nav {width:550px; margin:0 auto; padding:0 0 0 385px;}
+header#menu  {width:100%; height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
+header nav   {width:550px; margin:0 auto; padding:0 0 0 300px;}
 header nav a {display:inline-block; margin:3px 70px 0 0; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
-header nav a.active {background-position:0 0; padding:0 0 0 25px;}
+header nav a.active  {background-position:0 0; padding:0 0 0 25px;}
 header nav a:visited {color:#fff;}
-header nav a:hover {color:#ed7624;}
+header nav a:hover   {color:#ed7624;}
 
 #github {position:absolute; top:0; right:0; width:162px; height:121px; background-position:-440px 0;}
 
-
-
-
 /* title
 --------------------------------------------- */
-#title {color:#333; font-size:72px; text-align:center;}
-#title .html5 {color:#ed7624; font-size:170px; line-height:140px;}
-#title .css3 {color:#00a9c7; font-size:142px; line-height:92px;}
-#title i {font-size:92px; font-style:normal;}
-#title em {display:block; font-size:24px; font-style:normal;}
+#title {height:350px; margin:0 0 30px 0; color:#333; font-size:72px;}
+#title div {position:relative; line-height:0; }
+#title .html5 {line-height:135px; color:#ed7624; font-size:170px;}
+#title .amp   {display:inline-block; top:15px; font-size:102px; font-style:normal;}
+#title .css3  {display:inline-block; top:25px; color:#00a9c7; font-size:142px;}
+#title .noobs {top:40px; left:20px; color:#333; font-size:80px; font-style:italic;}
+#title .other {top:55px; left:35px; font-size:28px; font-style:normal;}
 
 /* table of contents
 --------------------------------------------- */
+#toc nav    {font-weight:100;}
+#toc nav h1 {color:#4a4a4a; font-size:38px; line-height:33px; text-transform:uppercase;}
+#toc nav h2 {color:#ed7624; font-size:28px; line-height:24px;}
+#toc nav ul {list-style-type:none; margin:10px 0 20px 20px;}
+#toc nav ul li a {padding:8px 0; color:#4a4a4a; font-size:22px; text-decoration:none;}
+
+/* content
+--------------------------------------------- */
+#content {font-size:18px;}
+#content header    {font-weight:normal;}
+#content header h1 {color:#4a4a4a; font-size:78px; text-transform:uppercase; line-height:60px;}
+#content header h2 {color:#ed7624; font-size:52px; line-height:52px;}
+
+#content section     {margin:40px 0 0 0;}
+#content section h3  {color:#00a9c7; font-size:36px; font-weight:normal;}
+#content section p   {margin:5px 0;}
+#content section pre {margin:15px 0 15px 30px; color:#333; background-color:#fff;}
+
+/* footer
+--------------------------------------------- */
+footer {clear:both;}
