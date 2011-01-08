@@ -34,7 +34,7 @@ header nav a.active,
 /* header and menu
 --------------------------------------------- */
 header#menu {width:100%; height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
-header nav   {width:550px; margin:0 auto; padding:0 0 0 300px;}
+header nav   {width:550px; margin:0 auto; padding:0 0 0 300px; font-weight:normal;}
 header nav a {display:inline-block; margin:3px 70px 0 0; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
 header nav a.active  {background-position:0 0; padding:0 0 0 25px;}
 header nav a:visited {color:#fff;}
