@@ -26,7 +26,7 @@ header nav a.active,
 
 /* header and menu
 --------------------------------------------- */
-header#menu  {width:100%; height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
+header#menu {width:100%; height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
 header nav   {width:550px; margin:0 auto; padding:0 0 0 300px;}
 header nav a {display:inline-block; margin:3px 70px 0 0; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
 header nav a.active  {background-position:0 0; padding:0 0 0 25px;}
@@ -42,16 +42,17 @@ header nav a:hover   {color:#ed7624;}
 #title .html5 {line-height:135px; color:#ed7624; font-size:170px;}
 #title .amp   {display:inline-block; top:15px; font-size:102px; font-style:normal;}
 #title .css3  {display:inline-block; top:25px; color:#00a9c7; font-size:142px;}
-#title .noobs {top:40px; left:20px; color:#333; font-size:80px; font-style:italic;}
+#title .noobs {top:40px; left:20px; font-size:80px; font-style:italic;}
 #title .other {top:55px; left:35px; font-size:28px; font-style:normal;}
 
 /* table of contents
 --------------------------------------------- */
 #toc nav    {font-weight:100;}
-#toc nav h1 {color:#4a4a4a; font-size:38px; line-height:33px; text-transform:uppercase;}
-#toc nav h2 {color:#ed7624; font-size:28px; line-height:24px;}
+#toc nav h1 {color:#4a4a4a; font-size:42px; line-height:38px; text-transform:uppercase;}
+#toc nav h2 {color:#ed7624; font-size:34px; line-height:28px;}
 #toc nav ul {list-style-type:none; margin:10px 0 20px 20px;}
 #toc nav ul li a {padding:8px 0; color:#4a4a4a; font-size:22px; text-decoration:none;}
+#toc nav ul li a.active {color:#00a9c7;}
 
 /* content
 --------------------------------------------- */
@@ -67,4 +68,10 @@ header nav a:hover   {color:#ed7624;}
 
 /* footer
 --------------------------------------------- */
-footer {clear:both;}
+footer {clear:both; height:100px;
+background-color: #555;
+background-image: -moz-linear-gradient(top, #555, #1f1f1f); 
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #555),color-stop(1, #1f1f1f)); 
+background-image: linear-gradient(top, #555, #1f1f1f);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#555', EndColorStr='#1f1f1f'); 
+}
