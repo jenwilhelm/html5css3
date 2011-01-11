@@ -1,7 +1,21 @@
+/*
+***********************************************************
+
+Title:      master.css
+
+Author:     Jen Wilhelm
+Created:    12/26/2010
+Last modified:  01/13/2011
+
+Orange:    #ed7624
+Blue:      #00a9c7
+Dark grey: #333
+Grey:      #4a4a4a
+
+***********************************************************/
 
 
-
-/* layout
+/* layout & links
 --------------------------------------------- */
 body {background:transparent url('../images/greyTexture.png') top left repeat; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
 #container {width:950px; margin:60px auto;}
@@ -10,7 +24,7 @@ body {background:transparent url('../images/greyTexture.png') top left repeat; f
 
 a,
 a:active,
-a:visited {color:#555; font-weight:bold;}
+a:visited {color:#333;}
 a:hover   {color:#ed7624;}
 
 /* fonts & sprites
@@ -21,9 +35,9 @@ header nav,
 #toc #banner,
 #toc nav,
 #content header,
-#content section h3 {font-family:'league-gothic-1','league-gothic-2';}
+#content section h3 {font-family:"league-gothic-1","league-gothic-2";}
 
-#title {font-family:'bistro-script-web-1','bistro-script-web-2';}
+#title {font-family:"bistro-script-web-1","bistro-script-web-2";}
 
 header nav a.active,
 #toc nav ul li,
@@ -33,11 +47,11 @@ header nav a.active,
 
 /* header and menu
 --------------------------------------------- */
-header#menu {width:100%; height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
-header nav   {width:550px; margin:0 auto; padding:0 0 0 300px; font-weight:normal;}
-header nav a {display:inline-block; margin:3px 70px 0 0; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
-header nav a.active  {background-position:0 0; padding:0 0 0 25px;}
-header nav a:visited {color:#fff;}
+header#menu {height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
+header nav   {width:550px; margin:0 auto; padding:0 0 0 252px;}
+header nav a {display:inline-block; margin:3px 70px 0 0; padding:0 0 0 25px; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
+header nav a:visited, header nav a:active {color:#fff;}
+header nav a.active  {color:#ed7624; background-position:0 0;}
 header nav a:hover   {color:#ed7624;}
 
 #github {position:absolute; top:0; right:0; width:162px; height:121px; background-position:-440px 0;}
@@ -75,6 +89,7 @@ header nav a:hover   {color:#ed7624;}
 #content header h2 {color:#ed7624; font-size:52px; line-height:52px;}
 
 #content section     {margin:40px 0 0 0;}
+#content section a   {font-weight:bold;}
 #content section img {margin:0 20px 0 0;}
 #content section h3  {color:#00a9c7; font-size:36px; font-weight:normal;}
 #content section p   {margin:8px 0;}
@@ -88,9 +103,9 @@ header nav a:hover   {color:#ed7624;}
 /* footer
 --------------------------------------------- */
 footer {clear:both; height:100px;
-background-color: #555;
-background-image: -moz-linear-gradient(top, #555, #1f1f1f); 
-background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #555),color-stop(1, #1f1f1f)); 
-background-image: linear-gradient(top, #555, #1f1f1f);
-          filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#555', EndColorStr='#1f1f1f'); 
+	background-color: #555;
+	background-image: -moz-linear-gradient(top, #555, #1f1f1f); 
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #555),color-stop(1, #1f1f1f)); 
+	background-image: linear-gradient(top, #555, #1f1f1f);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#555', EndColorStr='#1f1f1f'); 
 }
