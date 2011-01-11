@@ -10,7 +10,6 @@
         
     <script type="text/javascript" src="http://use.typekit.com/rnk8cvv.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/ohhai.js"></script>
   </head>
@@ -47,16 +46,13 @@
             <h1>Lesson 1</h1>
             <h2>html5 is your friend</h2>
               <ul>
-                <li><a name="#l1-1">who can use it?</a></li>
+                <li><a name="#l1-1">what's different?</a></li>
                 <li><a name="#l1-2">the doctype</a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
-                <li><a name="#l1-2"></a></li>
+                <li><a name="#l1-3">structure elements</a></li>
+                <li><a name="#l1-4">form elements</a></li>
+                <li><a name="#l1-5">canvas</a></li>
+                <li><a name="#l1-6">audio &amp; video</a></li>
+                <li><a name="#l1-7">advanced</a></li>
               </ul>
               
               <h1>Lesson 2</h1>
@@ -105,21 +101,121 @@
 					<p>I'm not an expert in html5 <em>or</em> css3.</p>
 					<p>I'm also assuming a basic knowledge of html and css.</p>
 						
-					<h3>Questions?</h3>
+					<h3>about this presentation</h3>
+					<p>This site is written entirely in html5 &amp; css3. It is available <a href="https://github.com/jenwilhelm/html5css3" target="_blank">on github</a> if you'd like to see the source.</p>
+					<p>To page through the presentation, you can use the navigation on the left or use the left/right arrow keys.</p>	
+						
+					<h3>questions?</h3>
 					<p>Please ask. I'll do my best. :)</p>
 				</section>
+				
+				
 
         <section id="l1-1" class="hidden">
-          <h3>who can use it?</h3>
-					<p>you, right now!</p>
-					<pre>aaaa<span></span></pre>
+          <h3>what's different?</h3>
+					<p>html5's syntax is a lot more lax than xhtml 1.0. Whereas xhtml 1.0 enforced lowercase tags and attributes, quoted attributes, and closing tags (including standalone elements, such as &lt;br&gt;), html5 does not.</p>
+					<pre>
+						<code>
+							&lt;-- valid xhtml 1.0 --&gt;
+							&lt;input type="radio" checked="checked" /&gt;<br>
+							
+							&lt;-- invalid xhtml 1.0, valid html5 --&gt;
+							&lt;INPUT TYPE=RADIO CHECKED&gt;<br>
+							
+							&lt;-- valid html5 --&gt;
+							&lt;input type="radio" checked&gt;<br>
+						</code>
+						<span></span>
+					</pre>
+					
+					<h3>byebye, type</h3>
+					<p>The "type" attribute is no longer needed in css or script declarations.</p>
+					<pre>
+						<code>
+							&lt;link rel="stylesheet" href="css/screen.css" type="stylesheet"&gt;<br>
+							&lt;script type="text/javascript" src="js/cupcakes.js" type="text/javascript"&gt;&lt;/script&gt;
+						</code>
+						<span></span>
+					</pre>
+					<p>can now become:</p>
+					<pre>
+						<code>
+							&lt;link rel="stylesheet" href="css/screen.css"&gt;<br>
+							&lt;script type="text/javascript" src="js/cupcakes.js"&gt;&lt;/script&gt;
+						</code>
+						<span></span>
+					</pre>
+					
+					<h3>obsolete (not deprecated)</h3>
+					<p>While you can still use these elements and attributes, html5 considers the following obsolete:</p>
+					<ul>
+						<li>frame</li>
+						<li>font</li>
+						<li>bgcolor</li>
+						<li>cellpadding, cellspacing</li>
+						<li>acronym (use abbr instead)</li>
+						<li>center</li>
+					</ul>
+					
+					<p>Use css instead!</p>
         </section>
 
+
+
 				<section id="l1-2" class="hidden">
-          <h3>asdfasdf</h3>
-					<p>you, right now!</p>
-					<pre>aaaa<span></span></pre>
+          <h3>the doctype</h3>
+					<p>Traditionally, a doctype is used to tell the browser which version of markup the page was written in, such as html 4.01 or xhtml 1.0.</p>
+					<p>You may be used to seeing something like this:</p>
+					<pre>
+						<code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;</code>
+						<span></span>
+					</pre>
+					
+					<p>Because html5 aims to be backwards-compatible and support all future versions of html, there is no need for a version number.</p>
+					<p>With html5, you can now simply use:</p>
+					<pre>
+						<code>&lt;!doctype html&gt;</code>
+						<span></span>
+					</pre>
+					
+					<p>Much easier to remember, no?</p>
+					<p>Sites that use the html5 doctype include Zappos, Google, YouTube, &amp; Twitter.</p>
         </section>
+
+
+
+				<section id="l1-3" class="hidden">
+          <h3>structure elements</h3>
+
+				</section>
+				
+				
+				
+				<section id="l1-4" class="hidden">
+          <h3>form elements</h3>
+
+				</section>
+				
+				
+				
+				<section id="l1-5" class="hidden">
+          <h3>canvas</h3>
+
+				</section>
+				
+				
+				
+				<section id="l1-6" class="hidden">
+          <h3>audio &amp; video</h3>
+
+				</section>
+				
+				
+				
+				<section id="l1-7" class="hidden">
+          <h3>advanced</h3>
+
+				</section>
         
       </div> <!-- end content -->
     

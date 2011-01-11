@@ -18,7 +18,7 @@ Grey:      #4a4a4a
 /* layout & links
 --------------------------------------------- */
 body {background:transparent url('../images/greyTexture.png') top left repeat; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
-#container {width:950px; margin:60px auto;}
+#container {width:950px; margin:40px auto;}
 #sidebar   {float:left; width:30%;}
 #content   {float:right; width:63%; margin:0 0 30px 0;}
 
@@ -68,9 +68,7 @@ header nav a:hover   {color:#ed7624;}
 
 /* table of contents
 --------------------------------------------- */
-#toc #banner {width:273px; height:44px; margin:0 0 30px 0; padding:8px 3px 0 0; background-position:0 -67px; color:#fff; font-size:26px; text-align:center;  
-
-}
+#toc #banner {width:273px; height:44px; margin:0 0 30px 0; padding:8px 3px 0 0; background-position:0 -67px; color:#fff; font-size:26px; text-align:center;}
 
 #toc nav    {font-weight:100;}
 #toc nav h1 {color:#4a4a4a; font-size:42px; line-height:38px; font-weight:normal; text-transform:uppercase;}
@@ -93,7 +91,7 @@ header nav a:hover   {color:#ed7624;}
 #content section img {margin:0 20px 0 0;}
 #content section h3  {color:#00a9c7; font-size:36px; font-weight:normal;}
 #content section p   {margin:15px 0;}
-#content section pre {position:relative; margin:15px 0 15px 30px; color:#333; background-color:#fff;  
+#content section pre {position:relative; margin:15px 0 45px 30px; color:#333; background-color:#fff;  
      -moz-border-radius:4px; 
   -webkit-border-radius:4px; 
           border-radius:4px; 

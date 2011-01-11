@@ -4,20 +4,22 @@
 		
 		// Event to load content when left or right arrow keys are pressed
 		$(document).keydown(function(e) {
-				// Get current section
-				var visibleSection = $('section:visible');
 			
-		    if (e.keyCode == 37) { 
-					getPrevSection(visibleSection);		// left key pressed
-		      return false;
-		    } else if (e.keyCode == 39) {
-					getNextSection(visibleSection);		// right key pressed
-					return false;
-				}
+			// Get current section
+			var visibleSection = $('section:visible');
+		
+	    if (e.keyCode == 37) { 
+				getPrevSection(visibleSection);		// left key pressed
+	      return false;
+	    } else if (e.keyCode == 39) {
+				getNextSection(visibleSection);		// right key pressed
+				return false;
+			}
 		}); // end keydown
 		
 		// Event to load content when clicked in the TOC
 		$('#toc ul').click(function(e) {
+			
 			e.preventDefault();
 			var sectionToShow = e.target.name,
 					visibleSection = $('section:visible');
@@ -26,7 +28,6 @@
 			$(visibleSection).hide(200, function() {
 				$(sectionToShow).show(200, function() {
 					checkHeader(visibleSection, $(sectionToShow));
-					
 				});
 			});
 
@@ -36,6 +37,7 @@
 	
 	// Load the next section
 	function getNextSection(section) {
+		
 		// Find next section
 		var nextSectionIndex = $('section').index(section) + 1;
 		
@@ -58,6 +60,7 @@
 	
 	// Load the previous section
 	function getPrevSection(section) {
+		
 		// Find previous section
 		var prevSectionIndex = $('section').index(section) -1;
 		
@@ -80,6 +83,7 @@
 	
 	// Check to see the correct header is showing based on section
 	function checkHeader(oldSection, newSection) {
+		
 		// Parse id of sections to find which one to transition to
 		var newHeaderId = $(newSection).attr('id').split('-')[0];
 		newHeaderId = newHeaderId.split('l')[1];
@@ -98,6 +102,7 @@
 	
 	// Check that the correct section is highlighted in the TOC based on the section
 	function checkTOC(section) {
+		
 		var sectionId = $(section).attr('id');
 		
 		// Remove all existing active classes
