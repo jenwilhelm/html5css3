@@ -31,7 +31,7 @@ a:hover   {color:#ed7624;}
 
 /* fonts & sprites
 --------------------------------------------- */
-header nav,
+header nav, footer,
 .html5,
 .css3,
 #toc #banner,
@@ -39,7 +39,8 @@ header nav,
 #content header,
 #content section h3 {font-family:"league-gothic-1","league-gothic-2";}
 
-#title {font-family:"bistro-script-web-1","bistro-script-web-2";}
+#title,
+.thatsWhatSheSaid {font-family:"bistro-script-web-1","bistro-script-web-2";}
 
 header nav a.active,
 #toc nav ul li,
@@ -50,7 +51,7 @@ header nav a.active,
 /* header and menu
 --------------------------------------------- */
 header#menu {height:58px; margin:0 auto; background:transparent url('../images/blackGradient.png') top left repeat-x;}
-header nav   {width:550px; margin:0 auto; padding:0 0 0 252px;}
+header nav   {width:550px; margin:0 auto; padding:0 0 0 255px;}
 header nav a {display:inline-block; margin:3px 70px 0 0; padding:0 0 0 25px; color:#fff; font-size:36px; text-decoration:none; text-transform:uppercase;}
 header nav a:visited, header nav a:active {color:#fff;}
 header nav a.active  {color:#ed7624; background-position:0 0;}
@@ -113,6 +114,10 @@ header nav a:hover   {color:#ed7624;}
 #content table tr td {padding:5px; text-align:center; border-right:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2; border-left:1px solid #c2c2c2;}
 #content table tr td img {vertical-align:middle;}
 
+#content table[name="support"] {width:100%; margin:20px 0;}
+#content table[name="support"] tr:first-child td {border-top:1px solid #c2c2c2;}
+#content table[name="support"] tr td {padding:5px; text-align:center; border-right:1px solid #c2c2c2; border-bottom:1px solid #c2c2c2; border-left:1px solid #c2c2c2;}
+
 #content section .roundedCorner {width:200px; height:300px; background-color: #ed7624;
      -moz-border-radius:10px; 
   -webkit-border-radius:10px; 
@@ -139,10 +144,16 @@ header nav a:hover   {color:#ed7624;}
 
 /* footer
 --------------------------------------------- */
-footer {clear:both; height:100px;
+footer {clear:both; height:40px; color:#fff; padding:30px 0; font-size:24px; font-weight:normal; text-align:center;
 	background-color: #555;
 	background-image: -moz-linear-gradient(top, #555, #1f1f1f); 
 	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #555),color-stop(1, #1f1f1f)); 
 	background-image: linear-gradient(top, #555, #1f1f1f);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#555', EndColorStr='#1f1f1f'); 
 }
+footer a,
+footer a:visited,
+footer a:active {color:#00a9c7; text-decoration:none;}
+footer a:hover {color:#ed7624;}
+
+footer .thatsWhatSheSaid {color:#363636;}

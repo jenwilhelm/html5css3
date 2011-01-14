@@ -64,8 +64,8 @@
                   <li><a name="#l2-3">text-shadow</a></li>
                   <li><a name="#l2-4">box-shadow</a></li>
                   <li><a name="#l2-5">opacity</a></li>
-                  <li><a name="#l2-6">transitions</a></li>
-                  <li><a name="#l2-7">multiple backgrounds</a></li>
+                  <li><a name="#l2-6">multiple backgrounds</a></li>
+                  <li><a name="#l2-7">selectors</a></li>
                   <li><a name="#l2-8">advanced</a></li>
                 </ul>  
           </nav>
@@ -815,6 +815,24 @@ controls poster="lotr.jpg">&lth;/video>
 				
 				<section id="l2-2" class="hidden">
           <h3>border-radius</h3>
+          <table name="support">
+            <tbody>
+              <tr>
+                <td><img src="images/safari.png" alt="Safari"></td>
+                <td><img src="images/chrome.png" alt="Chrome"></td>
+                <td><img src="images/ff.png" alt="Firefox"></td>
+                <td><img src="images/opera.png" alt="Opera"></td>
+                <td><img src="images/ie.png" alt="IE"></td>
+              </tr>
+              <tr>
+                <td>3+</td>
+                <td>3+</td>
+                <td>1+</td>
+                <td>10.5+</td>
+                <td>9 beta</td>
+              </tr>
+            </tbody>
+          </table>
           <p>Before css3, rounded corners were, to put it lightly, a pain in the ass. There were tons of different methods invented in order to achieve the rounded corner effect, the most popular one being the use of images.</p>
           
           <p>If you knew the width of your element would not change, you could do something like this:</p>
@@ -897,6 +915,24 @@ roundedCornerMiddle
 				
 				<section id="l2-3" class="hidden">
           <h3>text-shadow</h3>
+          <table name="support">
+            <tbody>
+              <tr>
+                <td><img src="images/safari.png" alt="Safari"></td>
+                <td><img src="images/chrome.png" alt="Chrome"></td>
+                <td><img src="images/ff.png" alt="Firefox"></td>
+                <td><img src="images/opera.png" alt="Opera"></td>
+                <td><img src="images/ie.png" alt="IE"></td>
+              </tr>
+              <tr>
+                <td>1.1+</td>
+                <td>2+</td>
+                <td>3.1+</td>
+                <td>9.5+</td>
+                <td>---</td>
+              </tr>
+            </tbody>
+          </table>
           <p>Another effect previously only achieved with images and Photoshop is the text effect.</p>
 					<pre>
 						<code>
@@ -926,6 +962,24 @@ h1 {
 				
 				<section id="l2-4" class="hidden">
           <h3>box-shadow</h3>
+          <table name="support">
+            <tbody>
+              <tr>
+                <td><img src="images/safari.png" alt="Safari"></td>
+                <td><img src="images/chrome.png" alt="Chrome"></td>
+                <td><img src="images/ff.png" alt="Firefox"></td>
+                <td><img src="images/opera.png" alt="Opera"></td>
+                <td><img src="images/ie.png" alt="IE"></td>
+              </tr>
+              <tr>
+                <td>3+</td>
+                <td>3+</td>
+                <td>3.5+</td>
+                <td>10.5+</td>
+                <td>9 beta</td>
+              </tr>
+            </tbody>
+          </table>
           <p>The box-shadow effect is another effect that was again previously only achievable with images and Photoshop.</p>
           <pre>
 						<code>
@@ -961,6 +1015,24 @@ h1 {
 				
 				<section id="l2-5" class="hidden">
           <h3>opacity</h3>
+          <table name="support">
+            <tbody>
+              <tr>
+                <td><img src="images/safari.png" alt="Safari"></td>
+                <td><img src="images/chrome.png" alt="Chrome"></td>
+                <td><img src="images/ff.png" alt="Firefox"></td>
+                <td><img src="images/opera.png" alt="Opera"></td>
+                <td><img src="images/ie.png" alt="IE"></td>
+              </tr>
+              <tr>
+                <td>1.2+</td>
+                <td>3+</td>
+                <td>3+</td>
+                <td>10+</td>
+                <td>9 beta</td>
+              </tr>
+            </tbody>
+          </table>
           <p>Opacity allows you to place an alpha layer on an element.</p>
 					<pre>
 						<code>
@@ -988,7 +1060,7 @@ h1 {
           <div class="box4"></div> 
           <div class="box5"></div>
           
-          <p class="clear">You could also use rgba to acheive the same effect:</p>
+          <p class="clear">You could also use rgba to achieve the same effect:</p>
           <pre>
 						<code>
 &lt;div class="box6">&lt;/div> 
@@ -1020,18 +1092,27 @@ h1 {
 				
 				
 				
+								
 				<section id="l2-6" class="hidden">
-          <h3>transitions</h3>
-					
-
-				</section>
-				
-				
-				
-				
-				
-				<section id="l2-7" class="hidden">
           <h3>multiple backgrounds</h3>
+          <table name="support">
+            <tbody>
+              <tr>
+                <td><img src="images/safari.png" alt="Safari"></td>
+                <td><img src="images/chrome.png" alt="Chrome"></td>
+                <td><img src="images/ff.png" alt="Firefox"></td>
+                <td><img src="images/opera.png" alt="Opera"></td>
+                <td><img src="images/ie.png" alt="IE"></td>
+              </tr>
+              <tr>
+                <td>1.3+</td>
+                <td>2+</td>
+                <td>3.6+</td>
+                <td>10.5+</td>
+                <td>9 beta</td>
+              </tr>
+            </tbody>
+          </table>
 					<p>A lot of the previous effects have lessened the need for multiple background images on the same element. But there are still fun things you can do with multiple backgrounds.</p>
 					
 					<pre>
@@ -1053,18 +1134,114 @@ body {
 				
 				
 				
-				<section id="l2-8" class="hidden">
-          <h3>advanced</h3>
+				
+				
+				<section id="l2-7" class="hidden">
+          <h3>selectors</h3>
+          <p>css3 introduces lots of helpful new selectors.</p>
+          
+          <p>
+            <strong>E[att^=”val”]</strong><br />
+            Matches any E element whose att attribute value begins with “val”.
+          </p>
 					
+					<p>
+            <strong>E[att$=”val”]</strong><br />
+            Matches any E element whose att attribute value ends with “val”.
+          </p>
+          
+          <p>
+            <strong>E[att*=”val”]</strong><br />
+            Matches any E element whose att attribute value contains the substring “val”.
+          </p>
+          
+          <p>
+            <strong>E:nth-child(n)</strong><br />
+            Matches any E element that is the n-th child of its parent.
+          </p>
+          
+          <p>
+            <strong>E:nth-of-type(n)</strong><br />
+            Matches any E element that is the n-th sibling of its type.
+          </p>
+          
+          <p>
+            <strong>E:first-child</strong><br />
+            Matches any E element that is the first child of its parent.
+          </p>
+          
+          <p>
+            <strong>E:last-child</strong><br />
+            Matches any E element that is the last child of its parent.
+          </p>
+          
+          <p>
+            <strong>E:only-child</strong><br />
+            Matches any E element that is the only child of its parent.
+          </p>
+          
+          <p>
+            <strong>E:checked, E:disabled, E::selection</strong><br />
+            Matches any user interface element (form control) E that is checked/disabled/selected.
+          </p>
+          
+          <p>
+            <strong>E:not(s)</strong><br />
+            Matches any E element that does not match the simple selector s.
+          </p>
+          
+          <h3>examples</h3>
+          <pre>
+						<code>
+/* Selects all form  inputs of type="text" */
+form input[type=text] { ... }
+
+/* Selects all even table rows */
+table tr:nth-child(even) { ... }
+
+/* Selects all even table rows */
+table tr:nth-child(odd) { ... }
+
+/* Selects every third table row */
+table tr:nth-child(3n+3) { ... }
+
+/* Selects the first and last list elements */
+ul li:first-child { ... }
+ul li:last-child { ... }
+						</code>
+						<span></span>
+					</pre>
+          
+          <p>There's even a <a href="http://kimblim.dk/css-tests/selectors/" target="_blank">handy little chart</a> that shows which selectors are supported in what browser.</p>
 
 				</section>
+				
+				
+				
+				
+				
+				
+				<section id="l2-8" class="hidden">
+          <h3>advanced</h3>
+					<p>css3 is also far from done. Eventually, browsers will provide better support for a lot of the other cool things in the css3 spec:</p>
+					<ul>
+					  <li><a href="http://www.w3.org/TR/css3-transitions/">transitions</a></li>
+						<li><a href="http://www.css3.info/preview/media-queries/" target="_blank">media queries</a></li>
+						<li><a href="http://www.css3.info/preview/multi-column-layout/" target="_blank">multi-column layouts</a></li>
+						<li><a href="http://www.css3.info/preview/web-fonts-with-font-face/" target="_blank">web fonts</a></li>
+					</ul>
+				</section>
+				
+				
+				
         
       </div> <!-- end content -->
     
     </div> <!-- end container -->
     
     <footer>
-      Footer
+      <p>&copy; 2011 Jen Wilhelm. I'm on <a href="http://www.twitter.com/jenwilhelm">Twitter</a>.</p>
+      <p class="thatsWhatSheSaid">(that's what she said)</p>
     </footer>
     
   </body>
