@@ -131,16 +131,16 @@ header nav a:hover   {color:#ed7624;}
         box-shadow: 5px 5px 6px rgba(0,0,0,0.5);
 }
 
-.box1 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgb(237, 118, 36); opacity: 0.2;}
-.box2 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgb(237, 118, 36); opacity: 0.4;}
-.box3 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgb(237, 118, 36); opacity: 0.5;}
-.box4 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgb(237, 118, 36); opacity: 0.6;}
-.box5 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgb(237, 118, 36); opacity: 1;}
-.box6 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgba(0, 169, 199, .2);}
-.box7 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgba(0, 169, 199, .4);}
-.box8 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgba(0, 169, 199, .6);}
-.box9 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgba(0, 169, 199, .8);}
-.box0 {width:75px; height:75px; float:left; margin:0 0 30px 0; background: rgba(0, 169, 199, 1);}
+.box1 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgb(237,118,36); opacity:0.2;}
+.box2 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgb(237,118,36); opacity:0.4;}
+.box3 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgb(237,118,36); opacity:0.5;}
+.box4 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgb(237,118,36); opacity:0.6;}
+.box5 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgb(237,118,36); opacity:1;}
+.box6 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgba(0,169,199,.2);}
+.box7 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgba(0,169,199,.4);}
+.box8 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgba(0,169,199,.6);}
+.box9 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgba(0,169,199,.8);}
+.box0 {width:75px; height:75px; float:left; margin:0 0 30px 0; background:rgba(0,169,199,1);}
 
 /* footer
 --------------------------------------------- */
