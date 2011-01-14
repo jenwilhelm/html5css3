@@ -24,7 +24,7 @@
 			var sectionToShow = e.target.name,
 					visibleSection = $('section:visible');
 			
-			$('body').animate({scrollTop: 0}, 50);
+			$('body').animate({scrollTop: 80}, 50);
 			checkTOC($(sectionToShow));
 			$(visibleSection).hide(200, function() {
 				$(sectionToShow).show(200, function() {
@@ -50,7 +50,7 @@
 		$(section).hide(200, function() {
 			// Slide in next section
 			var nextSection = $('section')[nextSectionIndex];
-			$('body').animate({scrollTop: 0}, 50);
+			$('body').animate({scrollTop: 80}, 50);
 			$(nextSection).show(300, function() { });
 			
 			// Check to make sure we have the right header
@@ -74,7 +74,7 @@
 			$(section).hide(200, function() {
 				// Slide in next section
 				var prevSection = $('section')[prevSectionIndex];
-				$('body').animate({scrollTop: 0}, 50);
+				$('body').animate({scrollTop: 80}, 50);
 				$(prevSection).show(300, function() { });
 				
 				// Check to make sure we have the right header
