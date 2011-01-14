@@ -100,7 +100,7 @@ header nav a:hover   {color:#ed7624;}
 #content section pre span {position:absolute; bottom:-33px; right:10px; width:40px; height:36px; background-position:right -124px;}
 #content section ul {margin:0 0 20px 25px;}
 #content section form {margin:0 0 0 30px;}
-#content section form label {display:block; width:50px;}
+#content section form label {display:block; width:50px; white-space:nowrap;}
 
 /* footer
 --------------------------------------------- */
