@@ -102,6 +102,10 @@ header nav a:hover   {color:#ed7624;}
 #content section form {margin:0 0 0 30px;}
 #content section form label {display:block; width:50px; white-space:nowrap;}
 
+#content section .formattedList h1, 
+#content section .formattedList h2, 
+#content section .formattedList h3 {color:#888; font-size:18px; font-family:"Trebuchet MS", Helvetica, Verdana, sans;}
+
 /* footer
 --------------------------------------------- */
 footer {clear:both; height:100px;

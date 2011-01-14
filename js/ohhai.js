@@ -24,6 +24,7 @@
 			var sectionToShow = e.target.name,
 					visibleSection = $('section:visible');
 			
+			$('body').animate({scrollTop: 0}, 50);
 			checkTOC($(sectionToShow));
 			$(visibleSection).hide(200, function() {
 				$(sectionToShow).show(200, function() {

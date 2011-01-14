@@ -49,10 +49,11 @@
                 <li><a name="#l1-1">goals of html5</a></li>
                 <li><a name="#l1-2">the doctype</a></li>
                 <li><a name="#l1-3">structural elements</a></li>
-                <li><a name="#l1-4">form elements</a></li>
-                <li><a name="#l1-5">canvas</a></li>
-                <li><a name="#l1-6">audio &amp; video</a></li>
-                <li><a name="#l1-7">advanced</a></li>
+								<li><a name="#l1-4">content models</a></li>
+                <li><a name="#l1-5">form elements</a></li>
+                <li><a name="#l1-6">canvas</a></li>
+                <li><a name="#l1-7">audio &amp; video</a></li>
+                <li><a name="#l1-8">advanced</a></li>
               </ul>
               
               <h1>Lesson 2</h1>
@@ -123,14 +124,14 @@
 					<p>html5's syntax is a lot more lax than xhtml 1.0. Whereas xhtml 1.0 enforced lowercase tags and attributes, quoted attributes, and closing tags (including standalone elements, such as &lt;br>), html5 does not.</p>
 					<pre>
 						<code>
-							&lt;-- valid xhtml 1.0 -->
-							&lt;input type="radio" checked="checked" /><br>
-							
-							&lt;-- invalid xhtml 1.0, valid html5 -->
-							&lt;INPUT TYPE=RADIO CHECKED><br>
-							
-							&lt;-- valid html5 -->
-							&lt;input type="radio" checked><br>
+&lt;-- valid xhtml 1.0 -->
+&lt;input type="radio" checked="checked" /><br>
+
+&lt;-- invalid xhtml 1.0, valid html5 -->
+&lt;INPUT TYPE=RADIO CHECKED><br>
+
+&lt;-- valid html5 -->
+&lt;input type="radio" checked><br>
 						</code>
 						<span></span>
 					</pre>
@@ -139,16 +140,18 @@
 					<p>The "type" attribute is no longer needed in css or script declarations.</p>
 					<pre>
 						<code>
-							&lt;link rel="stylesheet" href="css/screen.css" type="stylesheet"><br>
-							&lt;script type="text/javascript" src="js/cupcakes.js" type="text/javascript">&lt;/script>
+&lt;link rel="stylesheet" href="css/screen.css" 
+type="stylesheet"><br>
+&lt;script type="text/javascript" src="js/yay.js" 
+type="text/javascript">&lt;/script>
 						</code>
 						<span></span>
 					</pre>
 					<p>can now become:</p>
 					<pre>
 						<code>
-							&lt;link rel="stylesheet" href="css/screen.css"><br>
-							&lt;script src="js/cupcakes.js">&lt;/script>
+&lt;link rel="stylesheet" href="css/screen.css"><br>
+&lt;script src="js/yay.js">&lt;/script>
 						</code>
 						<span></span>
 					</pre>
@@ -174,14 +177,19 @@
 					<p>Traditionally, a doctype is used to tell the browser which version of markup the page was written in, such as html 4.01 or xhtml 1.0.</p>
 					<p>You may be used to seeing something like this:</p>
 					<pre>
-						<code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"></code>
+						<code>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 
+Transitional//EN">
+						</code>
 						<span></span>
 					</pre>
 					
 					<p>Because html5 aims to be backwards-compatible and support all future versions of html, there is no need for a version number.</p>
 					<p>With html5, you can now simply use:</p>
 					<pre>
-						<code>&lt;!doctype html></code>
+						<code>
+&lt;!doctype html>
+						</code>
 						<span></span>
 					</pre>
 					
@@ -201,7 +209,6 @@
 						<li>footer</li>
 						<li>aside</li>
 						<li>article</li>
-						<li></li>
 					</ul>
 					
 					<h3>nav</h3>
@@ -330,7 +337,153 @@
 				
 				
 				
+				
 				<section id="l1-4" class="hidden">
+          <h3>content models</h3>
+					<p>Previous versions of html divided elements into two categories: inline and block-level.</p>
+					<p>html5 divides them up even further. Elements that were previously inline are now considered "text-level". Many block-level elements fall under "grouping content". Forms have their own, and images/audio/video/canvas are "embedded." All of html5's new elements (header, section, article, etc) are under a new content model called "sectioning content."
+						
+					<h3>sectioning content</h3>
+					<p>Say we have the following:</p>
+					<pre>
+						<code>
+&lt;h1&gt;Jen's favorite things*&lt;/h1&gt;
+  &lt;h2&gt;Cupcakes&lt;/h2&gt;
+    &lt;h3&gt;Chocolate cheesecake&lt;/h3&gt;
+    &lt;h3&gt;Red Velvet&lt;/h3&gt;
+    &lt;h3&gt;Vanilla&lt;/h3&gt;
+  &lt;h2&gt;White things&lt;/h2&gt;
+    &lt;h3&gt;Snow&lt;/h3&gt;
+    &lt;h3&gt;Marshmallows&lt;/h3&gt;
+  &lt;h2&gt;Cleaning&lt;/h2&gt;
+&lt;small>* Not an inclusive list&lt;/small>
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>This will yield:</p>
+					<ul>
+						<li>Jen's favorite things*
+							<ul>
+					  		<li>Cupcakes
+									<ul>
+					    			<li>Chocolate cheesecake</li>
+					    			<li>Red Velvet</li>
+					    			<li>Vanilla</li>
+									</ul>
+								</li>
+								<li>White things
+									<ul>
+							    	<li>Snow</li>
+							    	<li>Marshmallows</li>
+									</ul>
+								</li>
+							  <li>Cleaning</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<p>But what about that &lt;small> element? Which element is it associated with? Browsers have no way of knowing that it should be associated with the entire document, not just the last &lt;h2> element. Sectioning elements to the rescue! Let's try this instead:</p>
+					
+					<pre>
+						<code>
+&lt;h1&gt;Jen's favorite things*&lt;/h1&gt;
+  &lt;section>
+  &lt;h2&gt;Cupcakes&lt;/h2&gt;
+    &lt;h3&gt;Chocolate cheesecake&lt;/h3&gt;
+    &lt;h3&gt;Red Velvet&lt;/h3&gt;
+    &lt;h3&gt;Vanilla&lt;/h3&gt;
+  &lt;h2&gt;White things&lt;/h2&gt;
+    &lt;h3&gt;Snow&lt;/h3&gt;
+    &lt;h3&gt;Marshmallows&lt;/h3&gt;
+  &lt;h2&gt;Cleaning&lt;/h2&gt;
+  &lt;/section>
+&lt;small>* Not an inclusive list&lt;/small>
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>Now the browser understands that the &lt;small> element falls under the &lt;h1>, not the &lt;h2>. If you wanted to go even further, then each &lt;h2> element could be placed in its own &lt;section>.</p>
+					
+					<h3>outline algorithm</h3>
+					<p>html5 uses a new outline algorithm, which states that each piece of sectioning content has its own self-contained outline.</p>
+					
+					<pre>
+						<code>
+&lt;h1&gt;Jen's favorite things*&lt;/h1&gt;
+  &lt;section>
+  &lt;h1&gt;Cupcakes&lt;/h1&gt;
+    &lt;h2&gt;Chocolate cheesecake&lt;/h2&gt;
+    &lt;h2&gt;Red Velvet&lt;/h2&gt;
+    &lt;h2&gt;Vanilla&lt;/h2&gt;
+  &lt;h1&gt;White things&lt;/h1&gt;
+    &lt;h2&gt;Snow&lt;/h2&gt;
+    &lt;h2&gt;Marshmallows&lt;/h2&gt;
+  &lt;h1&gt;Cleaning&lt;/h1&gt;
+  &lt;/section>
+&lt;small>* Not an inclusive list&lt;/small>
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>This will produce the same outline:</p>
+					<ul>
+						<li>Jen's favorite things*
+							<ul>
+					  		<li>Cupcakes
+									<ul>
+					    			<li>Chocolate cheesecake</li>
+					    			<li>Red Velvet</li>
+					    			<li>Vanilla</li>
+									</ul>
+								</li>
+								<li>White things
+									<ul>
+							    	<li>Snow</li>
+							    	<li>Marshmallows</li>
+									</ul>
+								</li>
+							  <li>Cleaning</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<h3>hgroup</h3>
+					<p>Sometimes you might want to use a header element, but you don't want it to show up in the document outline.</p>
+					
+					<pre>
+						<code>
+&lt;h1&gt;html5 &amp; css3 for noobs&lt;/h1&gt;
+&lt;h2&gt;and other fun things, too!&lt;/h2&gt;
+						</code>
+						<span></span>
+					</pre>
+					
+					<ul>
+						<li>html5 &amp; css3 for noobs
+							<ul>
+								<li>and other fun things, too!</li>
+							</ul>
+						</li>
+					</ul>
+					
+					<p>By enclosing headers with &lt;hgroup>, we can tell the document to ignore the enclosed headings in the outline.</p>
+					
+					<pre>
+						<code>
+&lt;h1&gt;html5 &amp; css3 for noobs&lt;/h1&gt;
+&lt;hgroup>
+  &lt;h2&gt;and other fun things, too!&lt;/h2&gt;
+&lt;/hgroup>
+						</code>
+						<span></span>
+					</pre>
+					
+				</section>
+				
+				
+				
+				<section id="l1-5" class="hidden">
           <h3>form elements</h3>
 					<p>Jen's favorite part of html5. This stuff is pretty awesome.</p>
 					
@@ -509,21 +662,21 @@ placeholder="Chocolate cheesecake" required>
 				
 				
 				
-				<section id="l1-5" class="hidden">
+				<section id="l1-6" class="hidden">
           <h3>canvas</h3>
-
+					<p>What exactly is canvas? Simply put, it's an element for creating dynamic images.</p>
 				</section>
 				
 				
 				
-				<section id="l1-6" class="hidden">
+				<section id="l1-7" class="hidden">
           <h3>audio &amp; video</h3>
 
 				</section>
 				
 				
 				
-				<section id="l1-7" class="hidden">
+				<section id="l1-8" class="hidden">
           <h3>advanced</h3>
 
 				</section>
