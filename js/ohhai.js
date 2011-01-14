@@ -96,7 +96,7 @@
 		
 		// Only do transition if sections are different
 		if (oldHeaderId != newHeaderId) {
-			$('header.lessonTitle').hide(200, function() {
+			$('header.lessonTitle').hide(100, function() {
 				$('#lesson' + newHeaderId).show(200, function() {});
 			});
 		}

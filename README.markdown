@@ -7,7 +7,7 @@ html5 questions
 
 1. What are 3 new structural elements that html5 introduces?
 
-2. What is the difference between an <aside> and a <section>?
+2. What is the difference between an &lt;aside> and a &lt;section>?
 
 3. What is the html5 doctype?
 
