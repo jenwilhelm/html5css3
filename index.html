@@ -347,15 +347,15 @@ Transitional//EN">
 					<p>Say we have the following:</p>
 					<pre>
 						<code>
-&lt;h1&gt;Jen's favorite things*&lt;/h1&gt;
-  &lt;h2&gt;Cupcakes&lt;/h2&gt;
-    &lt;h3&gt;Chocolate cheesecake&lt;/h3&gt;
-    &lt;h3&gt;Red Velvet&lt;/h3&gt;
-    &lt;h3&gt;Vanilla&lt;/h3&gt;
-  &lt;h2&gt;White things&lt;/h2&gt;
-    &lt;h3&gt;Snow&lt;/h3&gt;
-    &lt;h3&gt;Marshmallows&lt;/h3&gt;
-  &lt;h2&gt;Cleaning&lt;/h2&gt;
+&lt;h1>Jen's favorite things*&lt;/h1>
+  &lt;h2>Cupcakes&lt;/h2>
+    &lt;h3>Chocolate cheesecake&lt;/h3>
+    &lt;h3>Red Velvet&lt;/h3>
+    &lt;h3>Vanilla&lt;/h3>
+  &lt;h2>White things&lt;/h2>
+    &lt;h3>Snow&lt;/h3>
+    &lt;h3>Marshmallows&lt;/h3>
+  &lt;h2>Cleaning&lt;/h2>
 &lt;small>* Not an inclusive list&lt;/small>
 						</code>
 						<span></span>
@@ -387,16 +387,16 @@ Transitional//EN">
 					
 					<pre>
 						<code>
-&lt;h1&gt;Jen's favorite things*&lt;/h1&gt;
+&lt;h1>Jen's favorite things*&lt;/h1>
   &lt;section>
-  &lt;h2&gt;Cupcakes&lt;/h2&gt;
-    &lt;h3&gt;Chocolate cheesecake&lt;/h3&gt;
-    &lt;h3&gt;Red Velvet&lt;/h3&gt;
-    &lt;h3&gt;Vanilla&lt;/h3&gt;
-  &lt;h2&gt;White things&lt;/h2&gt;
-    &lt;h3&gt;Snow&lt;/h3&gt;
-    &lt;h3&gt;Marshmallows&lt;/h3&gt;
-  &lt;h2&gt;Cleaning&lt;/h2&gt;
+  &lt;h2>Cupcakes&lt;/h2>
+    &lt;h3>Chocolate cheesecake&lt;/h3>
+    &lt;h3>Red Velvet&lt;/h3>
+    &lt;h3>Vanilla&lt;/h3>
+  &lt;h2>White things&lt;/h2>
+    &lt;h3>Snow&lt;/h3>
+    &lt;h3>Marshmallows&lt;/h3>
+  &lt;h2>Cleaning&lt;/h2>
   &lt;/section>
 &lt;small>* Not an inclusive list&lt;/small>
 						</code>
@@ -410,16 +410,16 @@ Transitional//EN">
 					
 					<pre>
 						<code>
-&lt;h1&gt;Jen's favorite things*&lt;/h1&gt;
+&lt;h1>Jen's favorite things*&lt;/h1>
   &lt;section>
-  &lt;h1&gt;Cupcakes&lt;/h1&gt;
-    &lt;h2&gt;Chocolate cheesecake&lt;/h2&gt;
-    &lt;h2&gt;Red Velvet&lt;/h2&gt;
-    &lt;h2&gt;Vanilla&lt;/h2&gt;
-  &lt;h1&gt;White things&lt;/h1&gt;
-    &lt;h2&gt;Snow&lt;/h2&gt;
-    &lt;h2&gt;Marshmallows&lt;/h2&gt;
-  &lt;h1&gt;Cleaning&lt;/h1&gt;
+  &lt;h1>Cupcakes&lt;/h1>
+    &lt;h2>Chocolate cheesecake&lt;/h2>
+    &lt;h2>Red Velvet&lt;/h2>
+    &lt;h2>Vanilla&lt;/h2>
+  &lt;h1>White things&lt;/h1>
+    &lt;h2>Snow&lt;/h2>
+    &lt;h2>Marshmallows&lt;/h2>
+  &lt;h1>Cleaning&lt;/h1>
   &lt;/section>
 &lt;small>* Not an inclusive list&lt;/small>
 						</code>
@@ -453,8 +453,8 @@ Transitional//EN">
 					
 					<pre>
 						<code>
-&lt;h1&gt;html5 &amp; css3 for noobs&lt;/h1&gt;
-&lt;h2&gt;and other fun things, too!&lt;/h2&gt;
+&lt;h1>html5 &amp; css3 for noobs&lt;/h1>
+&lt;h2>and other fun things, too!&lt;/h2>
 						</code>
 						<span></span>
 					</pre>
@@ -471,9 +471,9 @@ Transitional//EN">
 					
 					<pre>
 						<code>
-&lt;h1&gt;html5 &amp; css3 for noobs&lt;/h1&gt;
+&lt;h1>html5 &amp; css3 for noobs&lt;/h1>
 &lt;hgroup>
-  &lt;h2&gt;and other fun things, too!&lt;/h2&gt;
+  &lt;h2>and other fun things, too!&lt;/h2>
 &lt;/hgroup>
 						</code>
 						<span></span>
@@ -665,12 +665,86 @@ placeholder="Chocolate cheesecake" required>
 				<section id="l1-6" class="hidden">
           <h3>canvas</h3>
 					<p>What exactly is canvas? Simply put, it's an element for creating dynamic images.</p>
+					
+					<pre>
+						<code>
+&lt;canvas id="canvas" width="300" height="300">
+  Your browser does not support canvas. Sad. :(
+&lt;/canvas>
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>The rest of the work is done with JavaScript.</p>
+					
+					<pre>
+						<code>
+var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d');
+
+// stroke black
+context.strokeStyle = '#000';
+
+// left, top, width, height
+strokeRect(0, 0, 200, 100);
+
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>The <a href="http://dev.w3.org/html5/canvas-api/canvas-2d-api.html" target="_blank">canvas 2d API</a> also provides lots of other methods: fillStyle, fillRect, lineWidth, etc.</p>
+
+					<h3>why use canvas?</h3>
+					<p>Let's take a look at a tool that some people at Zappos made:</p>
+					<img src="images/zoom.jpg" alt="Zoom to your room!">
+					
 				</section>
 				
 				
 				
 				<section id="l1-7" class="hidden">
           <h3>audio &amp; video</h3>
+					<p>Previous to html5, web developers had to rely on third-party technology to share audio &amp; video (Flash, RealPlayer, etc).</p>
+					
+					<h4>audio</h4>
+					<pre>
+						<code>
+&lt;audio src="shotsshotsshots.mp3" autoplay loop 
+controls>&lt;/audio>
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>But what if your browser doesn't support .mp3 format?</p>
+					<pre>
+						<code>
+&lt;audio autoplay loop controls>
+  &lt;source src="shotsshotsshots.ogg">
+  &lt;source src="shotsshotsshots.mp3">
+&lt;/audio>
+						</code>
+						<span></span>
+					</pre>
+					
+					<h4>video</h4>
+					<pre>
+						<code>
+&lt;video src="lotr.mp4" width="360" height="240" 
+controls poster="lotr.jpg">&lth;/video>
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>Again, what happens if your browser doesn't support .mp4?</p>
+					<pre>
+						<code>
+&lt;video autoplay loop controls>
+  &lt;source src="lotr.ogv" type="video/ogg">
+  &lt;source src="lotr.mp4" type="video/mp4">
+&lt;/video>
+						</code>
+						<span></span>
+					</pre>
 
 				</section>
 				
