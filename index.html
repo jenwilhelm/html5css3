@@ -60,12 +60,13 @@
               <h2>css3 is your best friend</h2>
                 <ul>
                   <li><a name="#l2-1">browser prefixes</a></li>
-                  <li><a name="#l2-2">core properties</a></li>
-                  <li><a name="#l2-3">transitions</a></li>
-                  <li><a name="#l2-4">multiple backgrounds</a></li>
-                  <li><a name="#l2-5"></a></li>
-                  <li><a name="#l2-6"></a></li>
-                  <li><a name="#l2-7"></a></li>
+                  <li><a name="#l2-2">border-radius</a></li>
+                  <li><a name="#l2-3">text-shadow</a></li>
+                  <li><a name="#l2-4">box-shadow</a></li>
+                  <li><a name="#l2-5">opacity</a></li>
+                  <li><a name="#l2-6">transitions</a></li>
+                  <li><a name="#l2-7">multiple backgrounds</a></li>
+                  <li><a name="#l2-8">advanced</a></li>
                 </ul>  
           </nav>
         </div>
@@ -767,6 +768,189 @@ controls poster="lotr.jpg">&lth;/video>
 				
 				<section id="l2-1" class="hidden">
           <h3>browser prefixes</h3>
+          <p>Browser prefixes allow browsers to start implementing parts of the spec before it's finished. It allow allows vendors to play with experimental properties that are not part of the spec.</p>
+          
+          <table name="browserPrefixes">
+            <thead>
+              <tr>
+                <th>Browser</th>
+                <th>Prefix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="images/safari.png" alt="Apple Safari"> Safari</td>
+                <td>-webkit-</td>
+              </tr>
+              <tr>
+                <td><img src="images/ff.png" alt="Mozilla Firefox"> Mozilla</td>
+                <td>-moz-</td>
+              </tr>
+              <tr>
+                <td><img src="images/opera.png" alt="Opera">Opera</td>
+                <td>-o-</td>
+              </tr>
+              <tr>
+                <td><img src="images/ie.png" alt="Microsoft Internet Explorer">Microsoft</td>
+                <td>-ms-</td>
+              </tr>
+            </tbody>
+          </table>
+					
+					<p>When specifying a css3 property, order matters. Place the non-prefixed version last so that once a browser does implement a property according to the spec, the real property will trump the prefixed property.</p>
+					
+					<h3>core properties</h3>
+          <p>css3 introduces a few new properties to play with:</p>
+          <ul>
+            <li>border-radius</li>
+            <li>text-shadow</li>
+            <li>box-shadow</li>
+            <li>opacity</li>
+            <li>rgba</li>
+          </ul>ß
+				</section>
+				
+				
+				
+				
+				<section id="l2-2" class="hidden">
+          <h3>border-radius</h3>
+          <p>Before css3, rounded corners were, to put it lightly, a pain in the ass. There were tons of different methods invented in order to achieve the rounded corner effect, the most popular one being the use of images.</p>
+          
+          <p>If you knew the width of your element would not change, you could do something like this:</p>
+          <pre>
+						<code>
+&lt;div class="roundedCornerTop">&lt;/div>
+&lt;div class="roundedCornerMiddle">
+  Content here
+&lt;/div>
+&lt;div class="roundedCornerTop">&lt;/div>
+
+...
+
+.roundedCornerTop {
+  width: 200px;
+  background: url("images/cornerTop.png") 
+    top left no-repeat;
+}
+
+.roundedCornerMiddle {
+  width: 200px;
+  background-color: #ed7624;
+}
+
+.roundedCornerBottom {
+  width: 200px;
+  background: url("images/cornerBottom.png") 
+    top left no-repeat;
+}
+						</code>
+						<span></span>
+					</pre>
+          
+          <p>Which would produce this:</p>
+          <p><img src="images/roundedCornersFixedWidth.png" alt="Rounded corner effect with fixed width">
+            
+          <p>But what if you weren't sure what your width would be? Then it gets even more messy.</p>
+          <pre>
+						<code>
+&lt;div class="roundedCornerTopLeft">&lt;/div>
+&lt;div class="roundedCornerTopRight">
+roundedCornerMiddle
+ Content here
+&lt;/div>
+&lt;div class="roundedCornerBottomLeft">&lt;/div>
+&lt;div class="roundedCornerBottomRight">
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>This technique required loads more css, and at least 4 images:</p>
+					<p><img src="images/roundedCornersNonFixedWidth.png" alt="Rounded corner effect with non-fixed width">
+					  
+					<p>And what happened if you changed your mind on the color?</p>
+            
+          <p>However, with css3 you can now simply do:</p>
+					<pre>
+						<code>
+&lt;div class="roundedCorner">&lt;/div>
+
+...
+
+.roundedCorner {
+     background-color: #ed7624;
+   -moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+        border-radius: 10px; 
+}
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>Which gives us this, image-free!</p>
+					<div class="roundedCorner"></div>
+
+				</section>
+				
+				
+				
+				
+				<section id="l2-3" class="hidden">
+          <h3>text-shadow</h3>
+          <p>Another effect previously only achieved with images and Photoshop is the text effect.</p>
+					<pre>
+						<code>
+&lt;h1>html5 &amp; css3 for noobs&lt;/h1>
+
+...
+
+h1 {
+  color: #00a9c7;
+  font-size: 66px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>The values it accepts are (horizontal offset, vertical offset, blur, color).</p>
+					
+					<div class="textShadow">html5 &amp; css3 for noobs</div>
+
+				</section>
+				
+				
+				
+				
+				<section id="l2-4" class="hidden">
+          <h3>box-shadow</h3>
+          <p>The box-shadow effect is another effect that was again previously only achievable with images and Photoshop.</p>
+          <pre>
+						<code>
+&lt;h1>html5 &amp; css3 for noobs&lt;/h1>
+
+...
+
+h1 {
+  color: #fff;
+  background-color: #00a9c7;
+  padding: 10px;
+  font-weight: 36px;
+  font-weight: bold;
+  text-align: center;
+   -moz-box-shadow: 5px 5px 6px rgba(0,0,0,0.5); 
+-webkit-box-shadow: 5px 5px 6px rgba(0,0,0,0.5); 
+        box-shadow: 5px 5px 6px rgba(0,0,0,0.5); 
+
+}
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>The values it accepts are (horizontal offset, vertical offset, blur bdistance, color).</p>
+					<div class="boxShadow">html5 &amp; css3 for noobs</div>
 					
 
 				</section>
@@ -774,8 +958,70 @@ controls poster="lotr.jpg">&lth;/video>
 				
 				
 				
-				<section id="l2-1" class="hidden">
-          <h3>browser prefixes</h3>
+				
+				<section id="l2-5" class="hidden">
+          <h3>opacity</h3>
+          <p>Opacity allows you to place an alpha layer on an element.</p>
+					<pre>
+						<code>
+&lt;div class="box1">&lt;/div> 
+&lt;div class="box2">&lt;/div> 
+&lt;div class="box3">&lt;/div> 
+&lt;div class="box4">&lt;/div> 
+&lt;div class="box5">&lt;/div>
+
+..
+
+.box1 {background: rgb(237,118,36); opacity: 0.2;}
+.box2 {background: rgb(237,118,36); opacity: 0.4;}
+.box3 {background: rgb(237,118,36); opacity: 0.5;}
+.box4 {background: rgb(237,118,36); opacity: 0.6;}
+.box5 {background: rgb(237,118,36); opacity: 1;}
+						</code>
+						<span></span>
+					</pre>
+
+          <p>Which gives us this:</p>
+          <div class="box1"></div> 
+          <div class="box2"></div> 
+          <div class="box3"></div> 
+          <div class="box4"></div> 
+          <div class="box5"></div>
+          
+          <p class="clear">You could also use rgba to acheive the same effect:</p>
+          <pre>
+						<code>
+&lt;div class="box6">&lt;/div> 
+&lt;div class="box7">&lt;/div> 
+&lt;div class="box8">&lt;/div> 
+&lt;div class="box9">&lt;/div> 
+&lt;div class="box0">&lt;/div>
+
+..
+
+.box6 {background: rgba(0,169,199,0.2);}
+.box7 {background: rgba(0,169,199,0.4);}
+.box8 {background: rgba(0,169,199,0.6);}
+.box9 {background: rgba(0,169,199,0.8);}
+.box0 {background: rgba(0,169,199,1);}
+						</code>
+						<span></span>
+					</pre>
+
+          <p class="clears">Which gives us the same thing:</p>
+          <div class="box6"></div> 
+          <div class="box7"></div> 
+          <div class="box8"></div> 
+          <div class="box9"></div> 
+          <div class="box0"></div>
+
+				</section>
+				
+				
+				
+				
+				<section id="l2-6" class="hidden">
+          <h3>transitions</h3>
 					
 
 				</section>
@@ -783,26 +1029,32 @@ controls poster="lotr.jpg">&lth;/video>
 				
 				
 				
-				<section id="l2-1" class="hidden">
-          <h3>browser prefixes</h3>
+				
+				<section id="l2-7" class="hidden">
+          <h3>multiple backgrounds</h3>
+					<p>A lot of the previous effects have lessened the need for multiple background images on the same element. But there are still fun things you can do with multiple backgrounds.</p>
 					
+					<pre>
+						<code>
+body {
+  background: 
+  url("topLayer.png") top left no-repeat, 
+  url("middleLayer.png") top left no-repeat, 
+  url("bottomLayer.png") top left no-repeat;
+} 
+						</code>
+						<span></span>
+					</pre>
+					
+					<p>There is also a popular effect happening on the web now called the parallax effect, which was first seen on the <a href="http://silverbackapp.com/" target="_blank">Silverback app</a> website.</p>
 
 				</section>
 				
 				
 				
 				
-				<section id="l2-1" class="hidden">
-          <h3>browser prefixes</h3>
-					
-
-				</section>
-				
-				
-				
-				
-				<section id="l2-1" class="hidden">
-          <h3>browser prefixes</h3>
+				<section id="l2-8" class="hidden">
+          <h3>advanced</h3>
 					
 
 				</section>

@@ -1,5 +1,7 @@
 What are 3 new structural elements that html5 introduces?
 
-What is the different between an aside and a section?
+What is the difference between an <aside> and a <section>?
 
 What is the html5 doctype?
+
+Should browser prefixes come before or after the non-prefixed property?
