@@ -86,6 +86,7 @@ header nav a:hover   {color:#ed7624;}
 #content header h1 {color:#4a4a4a; font-size:78px; text-transform:uppercase; line-height:60px;}
 #content header h2 {color:#ed7624; font-size:52px; line-height:52px;}
 
+#content section h4 {display:block; margin:50px 0 0 0; font-size:20px; border-bottom:1px dashed #888;}
 #content section     {margin:40px 0 0 0;}
 #content section a   {font-weight:bold;}
 #content section img {margin:0 20px 0 0;}
@@ -97,6 +98,9 @@ header nav a:hover   {color:#ed7624;}
           border-radius:4px; 
 }
 #content section pre span {position:absolute; bottom:-33px; right:10px; width:40px; height:36px; background-position:right -124px;}
+#content section ul {margin:0 0 20px 25px;}
+#content section form {margin:0 0 0 30px;}
+#content section form label {display:block; width:50px;}
 
 /* footer
 --------------------------------------------- */

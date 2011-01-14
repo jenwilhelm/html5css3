@@ -49,7 +49,8 @@
 		$(section).hide(200, function() {
 			// Slide in next section
 			var nextSection = $('section')[nextSectionIndex];
-			$(nextSection).show(200, function() { });
+			$('body').animate({scrollTop: 0}, 50);
+			$(nextSection).show(300, function() { });
 			
 			// Check to make sure we have the right header
 			checkHeader(section, nextSection);
@@ -72,7 +73,8 @@
 			$(section).hide(200, function() {
 				// Slide in next section
 				var prevSection = $('section')[prevSectionIndex];
-				$(prevSection).show(200, function() { });
+				$('body').animate({scrollTop: 0}, 50);
+				$(prevSection).show(300, function() { });
 				
 				// Check to make sure we have the right header
 				checkHeader(section, prevSection);
@@ -93,8 +95,8 @@
 		
 		// Only do transition if sections are different
 		if (oldHeaderId != newHeaderId) {
-			$('header.lessonTitle').hide(100, function() {
-				$('#lesson' + newHeaderId).show(100, function() {});
+			$('header.lessonTitle').hide(200, function() {
+				$('#lesson' + newHeaderId).show(200, function() {});
 			});
 		}
 				
